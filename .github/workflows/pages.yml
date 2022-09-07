@@ -37,4 +37,4 @@ jobs:
           # 发布到的分支
           BRANCH: gh-pages
           # 要发布的文件夹
-          FOLDER: dist/h5
+          FOLDER: dist/build/h5
