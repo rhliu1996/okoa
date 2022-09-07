@@ -35,6 +35,6 @@ jobs:
           # 该workflow需要操作repo，因此需要一个密钥，下面会讲到如何获取这个密钥
           ACCESS_TOKEN: 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
           # 发布到的分支
-          BRANCH: gh-pages
+          BRANCH: web
           # 要发布的文件夹
           FOLDER: dist/build/h5
