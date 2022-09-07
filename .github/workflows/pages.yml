@@ -32,6 +32,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
+          lfs: true
           # 该workflow需要操作repo，因此需要一个密钥，下面会讲到如何获取这个密钥
           ACCESS_TOKEN: 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
           # 发布到的分支
