@@ -1,6 +1,6 @@
 <template>
 	<view class="leftWindow">
-
+		ces
 	</view>
 </template>
 
