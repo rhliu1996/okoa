@@ -67,7 +67,9 @@
     "@dcloudio/uni-quickapp-webview": "^2.0.1-35320220729002",
     "@dcloudio/uni-stacktracey": "^2.0.1-35320220729002",
     "@dcloudio/uni-stat": "^2.0.1-35320220729002",
+    "@vue/composition-api": "^1.7.0",
     "@vue/shared": "^3.0.0",
+    "aegis-web-sdk": "^1.36.2",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
@@ -91,7 +93,7 @@
     "@dcloudio/webpack-uni-mp-loader": "^2.0.1-35320220729002",
     "@dcloudio/webpack-uni-pages-loader": "^2.0.1-35320220729002",
     "@vue/cli-plugin-babel": "~4.5.19",
-    "@vue/cli-plugin-typescript": "~4.5.11",
+    "@vue/cli-plugin-typescript": "^4.5.19",
     "@vue/cli-service": "~4.5.19",
     "babel-plugin-import": "^1.11.0",
     "cross-env": "^7.0.2",
@@ -100,7 +102,9 @@
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
     "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "unplugin-vue2-script-setup": "^0.11.3",
+    "vue-template-compiler": "^2.6.11",
+    "vue-tsc": "^0.40.9"
   },
   "browserslist": [
     "Android >= 4.4",

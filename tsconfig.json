@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators":true,
+    "experimentalDecorators": true,
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",
@@ -29,6 +29,9 @@
       "dom.iterable",
       "scripthost"
     ]
+  },
+  "vueCompilerOptions": {
+    "experimentalCompatMode": 2
   },
   "exclude": [
     "node_modules",
