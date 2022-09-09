@@ -18,6 +18,7 @@ jobs:
       - name: Checkout
         # 使用的actions脚本，这里是官方提供的获取源码脚本
         uses: actions/checkout@v3
+        uses: actions/setup-node@v3
         # 这个为使用 JamesIves/github-pages-deploy-action脚本所需要的配置
         with:
           persist-credentials: false
