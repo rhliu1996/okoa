@@ -1,7 +1,7 @@
 # 该workflow的名称，可以随意填写
 name: Build And Deploy To Github Pages
 
-# workflow的触发事件，这里代表main分支的push事件触发
+# workflow的触发事件，这里代表base分支的push事件触发
 on:
   push:
     branches: [ base ]
@@ -32,7 +32,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # 该workflow需要操作repo，因此需要一个密钥，下面会讲到如何获取这个密钥
+          # 该workflow需要操作repo，因此需要一个密钥，这个密钥回调用环境变量，因为是个人密钥，会放在变量防止泄露
           token: ${{ secrets.GITHUB_TOKEN }}
           # 发布到的分支
           branch: web
