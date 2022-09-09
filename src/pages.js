@@ -8,6 +8,7 @@ module.exports = (pagesJson, loader) => {
                 return {
                     path: tmp[1]
                 }
+
             } else {
                 console.error(`读取动态pages出错：${item}`)
             }
