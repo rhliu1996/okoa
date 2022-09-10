@@ -11,7 +11,7 @@
                 </view>
                 <view v-if="item.type == 'folder'" class="bottom">bottom</view>
             </view>
-            <view v-if="item.type != 'editor'" class="vertical"></view>
+            <view v-if="item.type != 'editor'" class="vertical" @mousedown="mousedown"></view>
         </view>
     </view>
 </template>
@@ -31,8 +31,8 @@ const data = reactive({
         type: 'editor'
     }]
 });
-function to() {
-    uni.navigateTo({ url: '/pages/index/home' })
+function mousedown(event:Event) {
+    
 }
 </script>
 
