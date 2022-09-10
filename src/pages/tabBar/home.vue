@@ -10,9 +10,6 @@ import { onShow } from '@/source/hook/uniapp';
 function to() {
 	uni.navigateTo({url:'/pages/index/home'})
 }
-onShow(() => {
-	console.log(10010)
-})
 </script>
 
 <style>

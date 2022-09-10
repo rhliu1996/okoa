@@ -1,0 +1,11 @@
+{
+    "style": {
+        "navigationBarTitleText": "document"
+    },
+    "isLauncher": true,
+    "tabBar": {
+        "iconPath": "static/image/icon_component.png",
+        "selectedIconPath": "static/image/icon_component_HL.png",
+        "text": "document"
+    }
+}

@@ -5,6 +5,7 @@ declare const __uniConfig: {
         backgroundColor:string;
         list: {
             pagePath: string;
+            text:string;
         }[]
     }
 };
