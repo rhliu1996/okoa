@@ -57,6 +57,14 @@ watch(isTabBar, value => {
 function updateCssVar(width: number) {
 	document.documentElement.style.setProperty('--window-left', `${width}px`)
 }
+
+function to(path: string) {
+	if (isTabBar) {
+		uni.switchTab({ url: `/${path}` })
+	} else {
+
+	}
+}
 onShow(() => {
 	console.log(10010)
 })
