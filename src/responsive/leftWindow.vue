@@ -3,7 +3,7 @@
 		<template v-if="isTabBar">
 			<view class="tabBar">
 				<view class="item" v-for="item in data.config.list"
-					:class="$route.meta.pagePath == item.pagePath?'active':''" :key="item.pagePath" :title="item.text">
+					:class="$route.meta.pagePath == item.pagePath?'active':''" :key="item.pagePath" :title="item.text" @click="to(item.pagePath)">
 					{{item.text}}
 				</view>
 			</view>
@@ -58,11 +58,14 @@ function updateCssVar(width: number) {
 	document.documentElement.style.setProperty('--window-left', `${width}px`)
 }
 
-function to(path: string) {
-	if (isTabBar) {
-		uni.switchTab({ url: `/${path}` })
+function to(pagePath: string) {
+	const isCurr = data.config.list?.findIndex(item => item.pagePath == pagePath)
+	if (isTabBar && isCurr != -1) {
+		uni.switchTab({ url: `/${pagePath}` });
+	} else if (isTabBar && isCurr == -1) {
+		uni.navigateTo({ url: `/${pagePath}` })
 	} else {
-
+		uni.redirectTo({ url: `/${pagePath}` })
 	}
 }
 onShow(() => {
