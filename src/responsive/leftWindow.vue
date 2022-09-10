@@ -1,6 +1,13 @@
 <template>
 	<view class="leftWindow" :style="data.config && data.config.style?data.config.style:{}">
-		{{data.config.style}}
+		<template v-if="isTabBar">
+			<view class="tabBar">
+				<view class="item" v-for="item in data.config.list"
+					:class="$route.meta.pagePath == item.pagePath?'active':''" :key="item.pagePath" :title="item.text">
+					{{item.text}}
+				</view>
+			</view>
+		</template>
 	</view>
 </template>
 
@@ -25,7 +32,8 @@ watch(isTabBar, value => {
 		data.config = {
 			style: {
 				backgroundColor: __uniConfig.tabBar.backgroundColor
-			}
+			},
+			list: __uniConfig.tabBar.list
 		}
 	} else {
 		const tmp = require.context('@/pages', true, /leftWindow\.(json|vue)$/);
@@ -56,6 +64,10 @@ onShow(() => {
 interface Data {
 	config: {
 		style?: {}
+		list?: {
+			pagePath: string;
+			text: string;
+		}[]
 	}
 }
 </script>
@@ -63,5 +75,27 @@ interface Data {
 <style lang="scss">
 .leftWindow {
 	flex: 1;
+
+	.tabBar {
+		padding: 10px;
+
+		.item {
+			aspect-ratio: 1/1;
+
+			&:hover {
+				background-color: rgba($color: #fff, $alpha: 0.1);
+				border-radius: 4px;
+			}
+		}
+
+		.active {
+			background-color: rgba($color: #fff, $alpha: 0.1);
+			border-radius: 4px;
+		}
+
+		.item+.item {
+			margin-top: 10px;
+		}
+	}
 }
 </style>
