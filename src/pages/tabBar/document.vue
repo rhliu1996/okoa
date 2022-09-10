@@ -1,11 +1,15 @@
 <template>
     <view class="document">
-        <view class="splie" v-for="(item,index) in data.view" :key="index" :style="item.type != 'editor'?{}:{flex:1}">
+        <view class="splie" v-for="(item,index) in data.view" :key="index"
+            :style="item.type != 'editor'?{minWidth:`${item.width}px`}:{flex:1}">
             <view class="content">
                 <view class="header">
                     123
                 </view>
-                <view class="main"></view>
+                <view class="main">
+
+                </view>
+                <view v-if="item.type == 'folder'" class="bottom">bottom</view>
             </view>
             <view v-if="item.type != 'editor'" class="vertical"></view>
         </view>
@@ -18,9 +22,11 @@ import { onShow } from '@/source/hook/uniapp';
 import { reactive } from '@vue/composition-api';
 const data = reactive({
     view: [{
-        type: 'folder'
+        type: 'folder',
+        width: 200
     }, {
-        type: 'folder'
+        type: 'file',
+        width: 200
     }, {
         type: 'editor'
     }]
@@ -39,6 +45,7 @@ function to() {
         flex-direction: row;
         position: sticky;
         border-right: 1px solid rgba($color: #000000, $alpha: 0.05);
+
         .content {
             flex: 1;
 
@@ -48,6 +55,11 @@ function to() {
 
             .main {
                 flex: 1;
+            }
+
+            .bottom {
+                border-top: 1px solid rgba($color: #000000, $alpha: 0.05);
+                padding: 10px;
             }
         }
 

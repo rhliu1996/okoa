@@ -69,6 +69,8 @@
     "@dcloudio/uni-stat": "^2.0.1-35320220729002",
     "@vue/composition-api": "^1.7.0",
     "@vue/shared": "^3.0.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "0.1.19",
     "aegis-web-sdk": "^1.36.2",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
